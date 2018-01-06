@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание 3</title>
+    <style>
+        .blue-button {
+            color: white;
+            border-radius: 4px;
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+            background: rgb(66, 184, 221);
+            font-size: 150%;
+        }
+    </style>
+</head>
+<body>
+    <button class="blue-button" onclick="ask()" autofocus> Нажмите для ввода текста </button>
+    <script>
+        "use strict";
+        function ask() {
+            var text = prompt("Введите любой текст", "");
+            var arr = text.split(" ");
+            arr.sort(function(a, b) {
+                return b.length - a.length;
+            });
+            var result = arr.slice(0, 3).join("; ");
+            alert(result);
+        }
+        
+    </script>
+</body>
+</html>

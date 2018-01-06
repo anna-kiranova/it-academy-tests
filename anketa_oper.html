@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Тестовое задание 2</title>
+</head>
+<body>
+    <script>
+        "use strict";
+        var last_name = prompt("Введите Вашу фамилию", "");
+        var first_name = prompt("Введите Ваше имя", "");
+        var middle_name = prompt("Введите Ваше отчество", "");
+        
+        var age = prompt("Введите Ваш возраст (в годах)", "");
+
+        var is_male = confirm("Ваш пол - мужской?");
+
+        // calculation of days
+        var days = age * 365;
+
+        // check of pension age
+        var pension_age = is_male ? 61 : 56;
+        var pension = age >= pension_age ?  "да" : "нет";
+
+        // output of full user info
+        var result = "ФИО: " + last_name + " " + first_name + " " + middle_name + "\n"; 
+        result += "возраст, лет: " + age + "\n";
+        result += "возраст, дней: " + days + "\n";
+
+        is_male = is_male ? "мужской" : "женский";
+        
+        result += "пол: " + is_male + "\n";
+        result += "пенсионный возраст: " + pension;
+        alert (result);
+    </script>
+</body>
+</html>
